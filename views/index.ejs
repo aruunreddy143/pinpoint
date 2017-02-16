@@ -48,17 +48,17 @@
   <form>
     <div class="searchArea" ng-controller="TypeaheadCtrl">
                     
-                    <div class='typeahead-demo' >
-                        <input type="text" ng-model="customSelected" placeholder="Type address" uib-typeahead="state as state.searchData for state in statesWithFlags | filter:{searchData:$viewValue}"  class="form-control pinpointSearch" >
-                    </div>
-                     <div class="pinpointSearchResult" ng-show="customSelected">
-                        <p><strong>Your Searched Result :</strong></p>
-                        {{customSelected.no}}, {{customSelected.address}}, {{customSelected.address2}}<br />
-                        {{customSelected.city}}<br />
-                        {{customSelected.pinpoint}}
+        <div class='typeahead-demo' >
+            <input type="text" ng-model="customSelected" placeholder="Type address" uib-typeahead="state as state.searchData for state in statesWithFlags | filter:{searchData:$viewValue} | listfilter:$viewValue"  class="form-control pinpointSearch" >
+        </div>
+         <div class="pinpointSearchResult" ng-show="customSelected">
+            <p><strong>Your Searched Result :</strong></p>
+            {{customSelected.no}}, {{customSelected.address}}, {{customSelected.address2}}<br />
+            {{customSelected.city}}<br />
+            {{customSelected.pinpoint}}
 
-                        <a href="#" class="pull-right">Locate this address</a>
-                    </div>
+            <a href="#" class="pull-right">Locate this address</a>
+        </div>
     </div>
   </form>
 </div>

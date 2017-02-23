@@ -57,8 +57,10 @@
             {{customSelected.city}}<br />
             {{customSelected.pinpoint}}
 
-            <a href="#" class="pull-right">Locate this address</a>
+            <a href="#" class="pull-right"  ng-click="locateMe(customSelected);">Locate this address</a>
         </div>
+
+        <div class="pinpointMap" ng-show="mapContainer"></div>
     </div>
   </form>
 </div>
@@ -322,6 +324,8 @@ Read more at: http://www.w3schools.com/graphics/google_maps_basic.asp
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-animate.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-sanitize.js"></script>
     <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-2.5.0.js"></script>
+
+    <script type="text/javascript" src="js/jquery.googlemap.js"></script>
 
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="js/mdb.min.js"></script>

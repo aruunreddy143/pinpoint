@@ -332,5 +332,6 @@ input.pinpointSearch:focus {
       max-width: 500px;
       margin: 0 auto;
   }
-
- 
+.pinpointMap {
+  height:300px;
+ }
